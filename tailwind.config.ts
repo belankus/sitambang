@@ -8,9 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Caveat: ["Caveat", "cursive"],
+        Poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#F3F4F6",
+        "background-2": "#101B33",
+        foreground: "#111827",
+        primary: "#139EA9",
+        secondary: "#1A2751",
+        "text-primary": "#111827",
       },
     },
   },
