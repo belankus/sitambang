@@ -17,7 +17,7 @@ const MobileNavbar = () => {
   return (
     <>
       {/* Mobile Navbar */}
-      <nav className="bg-primary fixed top-0 z-50 flex h-[60px] w-screen justify-center shadow-md lg:hidden">
+      <nav className="fixed top-0 z-50 flex h-[60px] w-screen justify-center bg-primary shadow-md lg:hidden">
         <div className="mx-5 flex w-full max-w-full justify-between">
           <Link href={"/"} className="flex h-full items-center">
             <Image src="/img/logo.svg" alt="Logo" width={48} height={40} />
@@ -26,8 +26,7 @@ const MobileNavbar = () => {
             <Button
               type="button"
               className="flex items-center justify-center !p-0"
-              onClick={(event: any) => {
-                event.preventDefault();
+              onClick={() => {
                 handleToggleMenu();
               }}
             >

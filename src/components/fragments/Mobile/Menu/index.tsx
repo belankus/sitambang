@@ -335,9 +335,7 @@ const AdvanceNavigation = (props: { pathname: string; links: LinksType }) => {
             <li
               className={`flex h-10 items-center justify-between rounded-lg px-3 ${
                 pathname === link.link ||
-                link.categories.some(
-                  (category: any) => pathname === category.link,
-                )
+                link.categories.some((category) => pathname === category.link)
                   ? "bg-primary opacity-100"
                   : "opacity-50"
               } `}
@@ -371,7 +369,7 @@ const AdvanceNavigation = (props: { pathname: string; links: LinksType }) => {
                 isDropDown === link.id ? "max-h-[150px]" : "max-h-0"
               }`}
             >
-              {link.categories.map((category: any) => (
+              {link.categories.map((category) => (
                 <Link
                   key={category.id}
                   href={category.link}

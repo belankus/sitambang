@@ -1,13 +1,13 @@
 "use client";
 
-import { signIn, signOut, useSession } from "next-auth/react";
+// import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import MobileNavbar from "../Mobile/Navbar";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Dropdown from "./Dropdown";
-import { ChevronDown, LayoutDashboard, X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import Button from "@/components/ui/Button";
 // import { useCart } from "@/context/CartContext";
 
@@ -144,50 +144,50 @@ const Navbar = () => {
   );
 };
 
-const ProfileMenu = (props: any) => {
-  const { session, isProfileMenuOpen, setIsProfileMenuOpen, pathname } = props;
+// const ProfileMenu = (props: any) => {
+//   const { session, isProfileMenuOpen, setIsProfileMenuOpen, pathname } = props;
 
-  return (
-    <div className="text-lava-black absolute left-1/2 top-full w-44 -translate-x-1/2 rounded-lg bg-white p-4 shadow-lg">
-      <div className="w-full">
-        {session ? (
-          <>
-            <div className="w-full">
-              <h2 className="line-clamp-1 text-sm font-semibold">
-                {session?.user?.name}
-              </h2>
-            </div>
-            <div className="my-2 w-full border-b" />
-            <div className="text-lava-black w-full text-sm font-semibold">
-              <Link
-                href={"/admin"}
-                className="hover:bg-lava-black/10 flex items-center gap-2 rounded p-2"
-              >
-                <LayoutDashboard size="18" />
-                Dashboard
-              </Link>
-            </div>
-            <div className="my-2 w-full border-b" />
-            <button
-              type="button"
-              className="border-action text-action hover:bg-action w-full rounded-lg border px-2 py-1.5 text-sm font-semibold hover:text-white"
-              onClick={() => signOut()}
-            >
-              Log Out
-            </button>
-          </>
-        ) : (
-          <button
-            type="button"
-            className="w-full rounded-lg border bg-primary px-2 py-1.5 text-sm font-semibold text-white hover:bg-primary/80 hover:text-white"
-            onClick={() => signIn()}
-          >
-            Log In
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="text-lava-black absolute left-1/2 top-full w-44 -translate-x-1/2 rounded-lg bg-white p-4 shadow-lg">
+//       <div className="w-full">
+//         {session ? (
+//           <>
+//             <div className="w-full">
+//               <h2 className="line-clamp-1 text-sm font-semibold">
+//                 {session?.user?.name}
+//               </h2>
+//             </div>
+//             <div className="my-2 w-full border-b" />
+//             <div className="text-lava-black w-full text-sm font-semibold">
+//               <Link
+//                 href={"/admin"}
+//                 className="hover:bg-lava-black/10 flex items-center gap-2 rounded p-2"
+//               >
+//                 <LayoutDashboard size="18" />
+//                 Dashboard
+//               </Link>
+//             </div>
+//             <div className="my-2 w-full border-b" />
+//             <button
+//               type="button"
+//               className="border-action text-action hover:bg-action w-full rounded-lg border px-2 py-1.5 text-sm font-semibold hover:text-white"
+//               onClick={() => signOut()}
+//             >
+//               Log Out
+//             </button>
+//           </>
+//         ) : (
+//           <button
+//             type="button"
+//             className="w-full rounded-lg border bg-primary px-2 py-1.5 text-sm font-semibold text-white hover:bg-primary/80 hover:text-white"
+//             onClick={() => signIn()}
+//           >
+//             Log In
+//           </button>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
 
 export default Navbar;
