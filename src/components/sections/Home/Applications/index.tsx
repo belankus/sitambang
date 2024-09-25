@@ -76,7 +76,7 @@ const applications = [
 
 export default function SectionApplications() {
   return (
-    <section className="relative bg-background pb-40">
+    <section className="relative bg-background pb-64">
       <div className="mx-auto w-full max-w-5xl pt-5">
         <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-5 lg:grid-cols-4">
           {applications.map((application, index) => (
