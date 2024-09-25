@@ -36,17 +36,17 @@ export const menu = [
     categories: [
       {
         id: "tendaWeddingProject",
-        title: "Tenda",
+        title: "Test 1",
         link: "/projects/wedding/tenda",
       },
       {
         id: "kursiWeddingProject",
-        title: "Kursi",
+        title: "Test 2",
         link: "/projects/wedding/kursi",
       },
       {
         id: "mejaWeddingProject",
-        title: "Meja",
+        title: "Test 3",
         link: "/projects/wedding/meja",
       },
     ],
@@ -58,17 +58,17 @@ export const menu = [
     categories: [
       {
         id: "tendaCorporateProject",
-        title: "Tenda",
+        title: "Test 1",
         link: "/projects/corporate/tenda",
       },
       {
         id: "kursiCorporateProject",
-        title: "Kursi",
+        title: "Test 2",
         link: "/projects/corporate/kursi",
       },
       {
         id: "mejaCorporateProject",
-        title: "Meja",
+        title: "Test 3",
         link: "/projects/corporate/meja",
       },
     ],
@@ -80,15 +80,15 @@ export const menu = [
     categories: [
       {
         id: "tendaEventProject",
-        title: "Tenda",
+        title: "Test 1",
         link: "/projects/event/tenda",
       },
       {
         id: "kursiEventProject",
-        title: "Kursi",
+        title: "Test 2",
         link: "/projects/event/kursi",
       },
-      { id: "mejaEventProject", title: "Meja", link: "/projects/event/meja" },
+      { id: "mejaEventProject", title: "Test 3", link: "/projects/event/meja" },
     ],
   },
 ];
