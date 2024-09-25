@@ -4,7 +4,7 @@ import Link from "next/link";
 const applications = [
   {
     img: "/assets/dashboard.svg",
-    caption: "Dashboard",
+    caption: "Management",
     link: "/dashboard",
   },
   {
@@ -14,8 +14,8 @@ const applications = [
   },
   {
     img: "/assets/scheduling.svg",
-    caption: "Schedule",
-    link: "/dashboard/schedule",
+    caption: "Activity",
+    link: "/dashboard/activity",
   },
   {
     img: "/assets/gallery.svg",
@@ -39,7 +39,7 @@ const applications = [
   },
   {
     img: "/assets/quality.svg",
-    caption: "Quality",
+    caption: "Quality Laboratory",
     link: "/dashboard/quality",
   },
   {

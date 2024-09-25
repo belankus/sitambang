@@ -5,22 +5,22 @@ export default function SectionHero() {
   return (
     <section className="relative mx-auto h-[90vh] w-full text-text-primary">
       <div className="pt-20">
-        <h1 className="font-Poppins mx-auto max-w-5xl text-center text-5xl font-bold">
+        <h1 className="mx-auto max-w-5xl text-center font-Poppins text-5xl font-bold">
           Semua kebutuhan bisnis tambang Anda dalam{" "}
           <span className="whitespace-nowrap bg-[url('/assets/highlight.svg')] bg-contain bg-center bg-no-repeat">
             satu platform.
           </span>
         </h1>
 
-        <h2 className="font-Poppins mx-auto mt-5 max-w-5xl text-center text-4xl font-semibold">
-          Sederhana, efisien,{" "}
+        <h2 className="mx-auto mt-5 max-w-5xl text-center font-Poppins text-4xl font-semibold">
+          mudah, efisien,{" "}
           <span className="whitespace-nowrap bg-[url('/assets/blue_highlight.svg')] bg-contain bg-center bg-no-repeat">
-            dan terintegrasi!
+            dan realtime!
           </span>
         </h2>
 
         {/* Section CTA */}
-        <div className="mx-auto mt-14 flex w-full max-w-5xl justify-center gap-4">
+        {/* <div className="mx-auto mt-14 flex w-full max-w-5xl justify-center gap-4">
           <Link
             href={"/ujicoba"}
             className="h-fit w-fit rounded-md border-secondary bg-secondary px-4 py-2 text-lg text-white"
@@ -33,7 +33,7 @@ export default function SectionHero() {
           >
             Jadwalkan Demo
           </Link>
-        </div>
+        </div> */}
       </div>
       <Image
         src={"/images/Home/wave-shade.svg"}
