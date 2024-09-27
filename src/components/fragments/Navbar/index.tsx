@@ -80,8 +80,17 @@ const Navbar = () => {
                   isHovered === "" ? setIsHovered("projects") : setIsHovered("")
                 }
               >
-                Aplikasi{" "}
-                {isHovered === "" ? <ChevronDown size={16} /> : <X size={16} />}
+                <span className="inline-block">Aplikasi </span>
+                <div className="relative inline-block">
+                  <ChevronDown
+                    size={16}
+                    className={`${isHovered === "projects" ? "[transform:_rotateX(90deg)]" : "[transform:_rotateX(0deg)]"} relative transition-transform`}
+                  />
+                  <X
+                    size={16}
+                    className={`${isHovered === "projects" ? "[transform:_rotateX(360deg)]" : "[transform:_rotateX(270deg)]"} absolute inset-0 transition-transform`}
+                  />
+                </div>
               </li>
               <Link onMouseEnter={() => setIsHovered("")} href="/gallery">
                 <li
