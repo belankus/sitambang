@@ -52,7 +52,7 @@ const MobileMenu = (props: Proptypes) => {
 
   return (
     <div
-      className={`bg-dark fixed right-0 top-0 z-50 block h-dvh w-screen transition-[transform_500ms_ease] sm:max-w-sm lg:hidden ${
+      className={`bg-background-3 fixed right-0 top-0 z-50 block h-dvh w-screen text-white transition-[transform_500ms_ease] sm:max-w-sm lg:hidden ${
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       } overflow-hidden`}
     >
@@ -199,7 +199,7 @@ const MobileMenu = (props: Proptypes) => {
                       <div className="flex items-center justify-center">
                         <Layers />
                       </div>
-                      <span className="text-sm font-semibold">Projects</span>
+                      <span className="text-sm font-semibold">Aplikasi</span>
                     </div>
                     <div className="flex items-center justify-center">
                       <ChevronRight />
