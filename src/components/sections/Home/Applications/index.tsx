@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const applications = [
+export const applications = [
   {
     img: "/assets/dashboard.svg",
     caption: "Management",
