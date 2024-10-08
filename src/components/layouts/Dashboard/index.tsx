@@ -1,15 +1,18 @@
+"use client";
+
 import Apps from "@/components/fragments/Apps";
-import { faBell, faGear } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Bell, LayoutGrid, Settings } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function DahsboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div className="flex h-[50px] w-full bg-secondary">
@@ -24,13 +27,27 @@ export default function DahsboardLayout({
             />
           </Link>
           <div className="relative flex gap-3">
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className={`${isOpen ? "bg-white/30" : ""} rounded-full p-1.5 transition-colors hover:bg-white/30`}
+            >
               <LayoutGrid className="size-4 text-white" />
             </button>
-            <Settings className="size-4 text-white" />
-            <Bell className="size-4 text-white" />
+            <button
+              type="button"
+              className={`rounded-full p-1.5 transition-colors hover:bg-white/30`}
+            >
+              <Settings className="size-4 text-white" />
+            </button>
+            <button
+              type="button"
+              className={`rounded-full p-1.5 transition-colors hover:bg-white/30`}
+            >
+              <Bell className="size-4 text-white" />
+            </button>
 
-            <Apps />
+            <Apps {...{ isOpen }} />
           </div>
         </div>
       </div>

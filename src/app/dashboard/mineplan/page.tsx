@@ -1,20 +1,55 @@
+"use client";
+
+import DashboardContent from "@/components/fragments/Dashboard/Dashboard";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Page() {
+  const pathname = usePathname();
   return (
     <>
-      <div className="bg-background-2 flex h-[50px] w-full">
+      <div className="flex w-full bg-background-2">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
-          <ul className="flex items-center gap-2 text-white">
-            <li className="relative block rounded-md">
-              <span>Information</span>
-            </li>
+          <ul className="flex h-full items-center gap-2 text-white">
+            <Link href={"/dashboard/mineplan"}>
+              <li
+                className={`${pathname == "/dashboard/mineplan" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
+              >
+                <span className="text-sm">Mineplan</span>
+              </li>
+            </Link>
+            <Link href={"/dashboard"}>
+              <li
+                className={`${pathname == "/dashboard/mineplan/daily" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
+              >
+                <span className="text-sm">Daily</span>
+              </li>
+            </Link>
+            <Link href={"/dashboard"}>
+              <li
+                className={`${pathname == "/dashboard/mineplan/weekly" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
+              >
+                <span className="text-sm">Weekly</span>
+              </li>
+            </Link>
+            <Link href={"/dashboard"}>
+              <li
+                className={`${pathname == "/dashboard/mineplan/monthly" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
+              >
+                <span className="text-sm">Monthly</span>
+              </li>
+            </Link>
+            <Link href={"/dashboard"}>
+              <li
+                className={`${pathname == "/dashboard/mineplan/yearly" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
+              >
+                <span className="text-sm">Yearly</span>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
-      <section className="bg-background-2 w-full pb-5">
-        <div className="shadow-background-2 mx-10 min-h-screen max-w-full rounded-xl bg-white p-10 [box-shadow:_rgba(0,_0,_0,_0.5)_0px_5px_10px_0px_inset]">
-          Dashboard
-        </div>
-      </section>
+      <DashboardContent />
     </>
   );
 }

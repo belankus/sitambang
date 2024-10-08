@@ -9,7 +9,7 @@ export default function Page() {
           <ul className="flex h-full items-center gap-2 text-white">
             <Link href={"/dashboard"}>
               <li className="relative block rounded-t-md bg-white px-4 py-2 text-text-primary">
-                <span className="text-sm font-bold">Gallery</span>
+                <span className="text-sm font-bold">Activity</span>
               </li>
             </Link>
           </ul>

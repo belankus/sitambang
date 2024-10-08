@@ -65,7 +65,7 @@ export default function SectionFooter() {
           </div>
         </div>
       </div>
-      <hr className="mx-auto mb-5 mt-20 h-px w-full max-w-6xl border-0 bg-gray-200" />
+      <hr className="mx-auto mb-5 mt-20 h-px w-full max-w-6xl border-0 bg-gray-200 opacity-50" />
       <div className="mx-auto flex max-w-6xl justify-between pb-5 text-sm">
         <p>Copyright &copy; 2024 DBS Coal and Mineral</p>
         <p>Kebijakan Privasi. Syarat dan Ketentuan.</p>
