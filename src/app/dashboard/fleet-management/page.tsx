@@ -1,9 +1,9 @@
-import FleetManagementContent from "@/components/fragments/Dashboard/FleetManagement/FleetManagement";
+import TrackingContent from "@/components/fragments/Dashboard/FleetManagement/Tracking";
 
 export default function Page() {
   return (
     <>
-      <FleetManagementContent />
+      <TrackingContent />
     </>
   );
 }

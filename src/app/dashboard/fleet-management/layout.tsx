@@ -14,16 +14,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li
                 className={`${pathname == "/dashboard/fleet-management" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
               >
-                <span className="text-sm">Overview</span>
-              </li>
-            </Link>
-            <Link href={"/dashboard/fleet-management/tracking"}>
-              <li
-                className={`${pathname == "/dashboard/fleet-management/tracking" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
-              >
                 <span className="text-sm">Tracking</span>
               </li>
             </Link>
+            <Link href={"/dashboard/fleet-management/overview"}>
+              <li
+                className={`${pathname == "/dashboard/fleet-management/overview" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}
+              >
+                <span className="text-sm">Overview</span>
+              </li>
+            </Link>
+
             <Link href={"/dashboard/fleet-management/vehicle"}>
               <li
                 className={`${pathname == "/dashboard/fleet-management/vehicle" ? "mt-2 bg-white font-bold text-text-primary" : "text-white"} relative block rounded-t-md px-4 py-2 text-text-primary`}

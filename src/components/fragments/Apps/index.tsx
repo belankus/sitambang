@@ -17,8 +17,9 @@ export default function Apps({ isOpen }: Proptypes) {
             key={index}
             className="flex cursor-pointer items-center justify-center gap-2 rounded-lg p-2"
           >
-            <figure className="flex flex-col items-center justify-center">
+            <figure className="relative flex flex-col items-center justify-center">
               <Link
+                title={`${application.caption}`}
                 href={application.link}
                 className="group peer cursor-pointer"
               >
@@ -30,7 +31,7 @@ export default function Apps({ isOpen }: Proptypes) {
                   className="mb-2 h-16 w-16 translate-y-0 rounded-md bg-white p-2 shadow-md transition-transform group-hover:-translate-y-1 group-hover:shadow-lg"
                 />
               </Link>
-              <figcaption className="line-clamp-1 text-center text-sm font-semibold peer-hover:line-clamp-none">
+              <figcaption className="line-clamp-1 text-center text-sm font-semibold">
                 {application.caption}
               </figcaption>
             </figure>

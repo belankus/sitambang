@@ -1,13 +1,8 @@
 import Image from "next/image";
 import DashboardLayout from "../Main";
-import {
-  FileCheck2,
-  FileSearch,
-  FileSearch2,
-  OctagonAlert,
-} from "lucide-react";
+import { FileCheck2, FileSearch, OctagonAlert } from "lucide-react";
 
-export default function FleetManagementContent() {
+export default function OverviewContent() {
   return (
     <DashboardLayout>
       <h1 className="mb-5 text-2xl font-bold">Overview</h1>

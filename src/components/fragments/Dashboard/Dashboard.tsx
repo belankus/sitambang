@@ -16,7 +16,6 @@ import {
   PointElement,
   RadialLinearScale,
 } from "chart.js";
-import Link from "next/link";
 import { Ellipsis, TrendingDown, TrendingUp } from "lucide-react";
 import DashboardLayout from "./Main";
 
