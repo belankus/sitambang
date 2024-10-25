@@ -1,13 +1,16 @@
 import DashboardLayout from "../Main";
 import {
+  Ban,
   Boxes,
   Ellipsis,
+  EllipsisVertical,
   MapPin,
   MapPinned,
   SlidersVertical,
   TriangleAlert,
   Truck,
 } from "lucide-react";
+import Image from "next/image";
 import { Fragment } from "react";
 
 export default function TrackingContent() {
@@ -15,10 +18,10 @@ export default function TrackingContent() {
     <DashboardLayout>
       {/* Header */}
       <div className="flex justify-between">
-        <h1 className="mb-5 max-w-20 text-2xl font-bold">Vehicle Tracking</h1>
+        <h1 className="mb-5 text-5xl font-bold">Vehicle Tracking</h1>
         <div className="flex gap-10">
           <div className="flex items-start gap-4">
-            <div className="flex items-center justify-center rounded-md bg-gray-100 p-6">
+            <div className="flex items-center justify-center rounded-md bg-gray-900 p-6 text-white">
               <Boxes size={24} />
             </div>
             <div>
@@ -29,7 +32,7 @@ export default function TrackingContent() {
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="flex items-center justify-center rounded-md bg-gray-100 p-6">
+            <div className="flex items-center justify-center rounded-md bg-gray-900 p-6 text-white">
               <MapPinned size={24} />
             </div>
             <div>
@@ -42,7 +45,7 @@ export default function TrackingContent() {
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="flex items-center justify-center rounded-md bg-gray-100 p-6">
+            <div className="flex items-center justify-center rounded-md bg-gray-900 p-6 text-white">
               <Truck size={24} />
             </div>
             <div>
@@ -58,9 +61,9 @@ export default function TrackingContent() {
       </div>
 
       {/* CTA */}
-      <div className="mt-2 flex w-full justify-between rounded-full bg-gray-100 p-1.5">
+      <div className="mt-4 flex w-full justify-between rounded-full bg-gray-900 p-1.5 text-white">
         <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center rounded-full bg-gray-50 p-2.5">
+          <div className="flex items-center justify-center rounded-full bg-gray-700 p-2.5">
             <MapPin size={20} />
           </div>
           <div className="text-xs">
@@ -78,19 +81,19 @@ export default function TrackingContent() {
           <div className="flex gap-1">
             <button
               type="button"
-              className="flex items-center justify-center rounded-full border border-gray-300 p-2.5 hover:bg-gray-200"
+              className="flex items-center justify-center rounded-full border border-gray-300 p-2.5 hover:bg-gray-700"
             >
               <SlidersVertical size={20} />
             </button>
             <button
               type="button"
-              className="text flex items-center rounded-full border border-gray-300 px-5 py-2 text-xs font-semibold hover:bg-gray-200"
+              className="text flex items-center rounded-full border border-gray-300 px-5 py-2 text-xs font-semibold hover:bg-gray-700"
             >
               Download Report
             </button>
             <button
               type="button"
-              className="flex items-center rounded-full border border-orange-400 bg-orange-400 px-5 py-2 text-xs font-semibold text-white hover:bg-orange-500"
+              className="flex items-center rounded-full border border-orange-500 bg-orange-500 px-5 py-2 text-xs font-semibold text-white hover:bg-orange-400"
             >
               View Report
             </button>
@@ -100,9 +103,14 @@ export default function TrackingContent() {
 
       {/* Card */}
       <div className="flex w-full gap-5">
-        <AnalyticCard />
-        <HistoryCard />
         <MapsCard />
+        {/* <AnalyticCard /> */}
+        <HistoryCard />
+        {/* <MapsCard /> */}
+      </div>
+      <div className="flex w-full gap-5">
+        {/* <MapsCard /> */}
+        <AnalyticCard />
       </div>
     </DashboardLayout>
   );
@@ -130,7 +138,7 @@ const AnalyticCard = () => {
   const data = generateRandomData(weeks, daysOfWeek.length); // Generating random data for 14 weeks (7 days per week)
 
   return (
-    <div className="mt-5 w-full max-w-xl rounded-lg bg-gray-900 p-6 text-white shadow-lg">
+    <div className="mt-5 w-1/2 rounded-lg bg-gray-900 p-6 text-white shadow-lg">
       {/* Top section with title and filters */}
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">Analytic view</h2>
@@ -193,9 +201,61 @@ const AnalyticCard = () => {
   );
 };
 
+const MapsCard = () => {
+  return (
+    <div className="mt-5 w-3/4 rounded-lg bg-gray-900 p-6 text-white shadow-lg">
+      {/* Top section with title and filters */}
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold">Tracking</h2>
+        {/* <div className="flex space-x-2">
+          {["Day", "Week", "Month", "Quarter", "Year", "All"].map((filter) => (
+            <button
+              key={filter}
+              className={`rounded px-3 py-1 text-sm ${
+                filter === "Week"
+                  ? "bg-gray-700 text-white"
+                  : "text-gray-400 hover:text-white"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div> */}
+        <div className="flex gap-2">
+          <button className="flex justify-between gap-2 rounded bg-green-800 px-2 py-1.5 text-sm">
+            <Truck size={20} className="text-white" />
+            <span>Dispatch</span>
+            <EllipsisVertical
+              size={20}
+              className="border-l border-gray-500 pl-2 text-white"
+            />
+          </button>
+          <button className="flex justify-between gap-2 rounded bg-red-800 px-2 py-1.5 text-sm">
+            <Ban size={20} className="text-white" />
+            <span>Retain</span>
+            <EllipsisVertical
+              size={20}
+              className="border-l border-gray-500 pl-2 text-white"
+            />
+          </button>
+        </div>
+      </div>
+      <div className="mt-5 w-full">
+        <Image
+          src="/images/maps.png"
+          alt="Maps"
+          width={400}
+          height={400}
+          className="w-full"
+        />
+      </div>
+    </div>
+  );
+};
+
 const HistoryCard = () => {
   return (
-    <div className="mt-5 w-full max-w-xl rounded-lg bg-gray-900 p-6 text-white shadow-lg">
+    <div className="mt-5 w-1/3 rounded-lg bg-gray-900 p-6 text-white shadow-lg">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">Tracking History</h2>
         <Ellipsis size={20} />
@@ -206,7 +266,7 @@ const HistoryCard = () => {
           <p className="font-semibold">#18761-10-8735yu</p>
         </div>
         <div>
-          <span className="inline-block rounded-full bg-yellow-600 px-2.5 py-1 text-xs text-white">
+          <span className="inline-block rounded-full bg-orange-500 px-2.5 py-1 text-xs text-black">
             In transit
           </span>
         </div>
@@ -215,7 +275,8 @@ const HistoryCard = () => {
         <div className="flex gap-2">
           {/* Dots and Line */}
           <div className="relative flex">
-            <div className="relative z-10 size-2 translate-y-1.5 animate-pulse rounded-full bg-yellow-500" />
+            <div className="relative z-10 size-2 translate-y-1.5 animate-pulse rounded-full bg-orange-500" />
+            <div className="absolute left-0 top-0 z-10 size-4 -translate-x-1 translate-y-0.5 animate-pulse rounded-full border border-orange-400 opacity-0 delay-300" />
             <div className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1.5 border-l border-dashed border-gray-400" />
           </div>
           <div className="flex w-full justify-between">
@@ -276,10 +337,10 @@ const HistoryCard = () => {
   );
 };
 
-const MapsCard = () => {
-  return (
-    <div className="mt-5 w-full max-w-xl rounded-lg bg-gray-900 p-6 text-white shadow-lg">
-      Testing
-    </div>
-  );
-};
+// const MapsCard = () => {
+//   return (
+//     <div className="mt-5 w-full max-w-xl rounded-lg bg-gray-900 p-6 text-white shadow-lg">
+//       Testing
+//     </div>
+//   );
+// };

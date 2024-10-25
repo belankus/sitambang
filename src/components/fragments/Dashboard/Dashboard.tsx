@@ -110,13 +110,13 @@ export default function DashboardContent() {
           {/* Widget */}
           <div className="w-1/3 rounded-md border bg-white p-5 shadow-md">
             <div className="flex items-center justify-between">
-              <h2 className="text-xs font-semibold">Total Asset</h2>
+              <h2 className="text-xs font-semibold">Total Production</h2>
               <Ellipsis size={20} />
             </div>
             <div>
-              <span className="relative -top-10 text-2xl font-bold">$</span>
-              <span className="text-7xl font-bold">2.51</span>
-              <span className="text-5xl font-bold">B</span>
+              <span className="relative -top-10 text-2xl font-bold"></span>
+              <span className="text-5xl font-bold">0</span>
+              <span className="text-2xl font-bold">MT</span>
             </div>
             <div className="mt-5">
               <TrendingUp size={20} className="inline text-green-700" />{" "}
@@ -127,12 +127,12 @@ export default function DashboardContent() {
           {/* Widget */}
           <div className="flex w-1/3 flex-col justify-between rounded-md border bg-white p-5 shadow-md">
             <div className="flex items-center justify-between">
-              <h2 className="text-xs font-semibold">Total Running Vehicle</h2>
+              <h2 className="text-xs font-semibold">Total Shipment</h2>
               <Ellipsis size={20} />
             </div>
             <div>
-              <span className="text-5xl font-bold">7,500</span>
-              <span className="text-xl font-bold">units</span>
+              <span className="text-5xl font-bold">0</span>
+              <span className="text-xl font-bold">MT</span>
             </div>
             <div className="mt-5">
               <TrendingDown size={20} className="inline text-red-700" />{" "}
@@ -143,12 +143,12 @@ export default function DashboardContent() {
           {/* Widget */}
           <div className="flex w-1/3 flex-col justify-between rounded-md border bg-white p-5 shadow-md">
             <div className="flex items-center justify-between">
-              <h2 className="text-xs font-semibold">Production YTD</h2>
+              <h2 className="text-xs font-semibold">Working Hour</h2>
               <Ellipsis size={20} />
             </div>
             <div>
-              <span className="text-5xl font-bold">4.1</span>
-              <span className="text-xl font-bold">Million Tonne</span>
+              <span className="text-5xl font-bold">0</span>
+              <span className="text-xl font-bold">Hour</span>
             </div>
             <div className="mt-5">
               <TrendingUp size={20} className="inline text-green-700" />{" "}
@@ -159,12 +159,12 @@ export default function DashboardContent() {
           {/* Widget */}
           <div className="flex w-1/3 flex-col justify-between rounded-md border bg-white p-5 shadow-md">
             <div className="flex items-center justify-between">
-              <h2 className="text-xs font-semibold">Production 1 Year</h2>
+              <h2 className="text-xs font-semibold">Total Vehicle</h2>
               <Ellipsis size={20} />
             </div>
             <div>
-              <span className="text-5xl font-bold">7.3</span>
-              <span className="text-xl font-bold">Million Tonne</span>
+              <span className="text-5xl font-bold">0</span>
+              <span className="text-xl font-bold">unit</span>
             </div>
             <div className="mt-5">
               <TrendingUp size={20} className="inline text-green-700" />{" "}
@@ -177,7 +177,7 @@ export default function DashboardContent() {
         <div className="flex w-full justify-between gap-5">
           {/* Widget */}
           <div className="w-1/2 rounded-md border bg-white p-5 shadow-md">
-            <h2>Title Line Chart 1</h2>
+            <h2>Production</h2>
             <div className="w-full">
               <Line
                 data={dataLine}

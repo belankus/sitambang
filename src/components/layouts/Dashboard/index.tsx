@@ -37,8 +37,9 @@ export default function DahsboardLayout({
     };
   }, []);
   return (
-    <>
-      <div className="flex h-[50px] w-full bg-secondary">
+    <div className="relative">
+      {/* Main Header */}
+      <div className="sticky top-0 z-20 flex h-[50px] w-full bg-secondary shadow-md">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
           <Link href={"/"}>
             <Image
@@ -70,12 +71,12 @@ export default function DahsboardLayout({
               <Bell className="size-4 text-white" />
             </button>
 
-            <Apps {...{ isOpen }} />
+            <Apps {...{ isOpen, setIsOpen }} />
           </div>
         </div>
       </div>
 
       {children}
-    </>
+    </div>
   );
 }
