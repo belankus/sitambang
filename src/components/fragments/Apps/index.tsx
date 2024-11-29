@@ -45,7 +45,6 @@ export default function Apps({ isOpen, setIsOpen }: Proptypes) {
           >
             <figure className="relative flex flex-col items-center justify-center">
               <Link
-                title={`${application.caption}`}
                 href={application.link}
                 className="group peer cursor-pointer"
               >

@@ -21,7 +21,7 @@ import {
   Tent,
   X,
 } from "lucide-react";
-import { signIn, signOut, useSession } from "next-auth/react";
+// import { signIn, signOut, useSession } from "next-auth/react";
 // import { useCart } from "@/context/CartContext";
 
 type Proptypes = {
@@ -43,7 +43,7 @@ type LinksType = {
 const advanceLinks = menu;
 
 const MobileMenu = (props: Proptypes) => {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
   // const { cart } = useCart();
   const { isMenuOpen, setIsMenuOpen } = props;
   const [isAdvance, setIsAdvance] = useState("");
@@ -52,7 +52,7 @@ const MobileMenu = (props: Proptypes) => {
 
   return (
     <div
-      className={`bg-background-3 fixed right-0 top-0 z-50 block h-dvh w-screen text-white transition-[transform_500ms_ease] sm:max-w-sm lg:hidden ${
+      className={`fixed right-0 top-0 z-50 block h-dvh w-screen bg-background-3 text-white transition-[transform_500ms_ease] sm:max-w-sm lg:hidden ${
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       } overflow-hidden`}
     >
@@ -97,29 +97,27 @@ const MobileMenu = (props: Proptypes) => {
           <div className="mt-5 flex items-end justify-between">
             <div className="flex gap-3">
               <div className="h-10 w-10 flex-grow-0 overflow-hidden rounded-full">
-                {session?.user?.image ? (
-                  <Image
+                {/* <Image
                     src={session?.user?.image}
                     alt="User"
                     width={40}
                     height={40}
-                  />
-                ) : (
-                  <Image
-                    src="/img/home/user.png"
-                    alt="User"
-                    width={40}
-                    height={40}
-                  />
-                )}
+                  /> */}
+                <Image
+                  src="/img/home/user.png"
+                  alt="User"
+                  width={40}
+                  height={40}
+                />
               </div>
 
               <div>
                 <h2 className="text-base font-medium">
-                  {session ? session?.user?.name : "Selamat Datang"}
+                  {/* {session ? session?.user?.name : "Selamat Datang"} */}
                 </h2>
                 <p className="text-shade text-xs font-medium">
-                  {session ? session?.user?.email : "Klik Log In untuk memulai"}
+                  {/* {session ? session?.user?.email : "Klik Log In untuk memulai"} */}
+                  Klik Login Untuk Memulai
                 </p>
               </div>
             </div>
@@ -299,25 +297,25 @@ const MobileMenu = (props: Proptypes) => {
 
         {/* Logout Button */}
         <div className="my-5">
-          {session ? (
-            <Button
-              type="button"
-              variant="hollow"
-              className="!border-action !text-action w-full"
-              onClick={() => signOut()}
-            >
-              Log Out
-            </Button>
-          ) : (
-            <Button
+          {/* {session ? ( */}
+          <Button
+            type="button"
+            variant="hollow"
+            className="!border-action !text-action w-full"
+            // onClick={() => signOut()}
+          >
+            Log Out
+          </Button>
+          {/* ) : ( */}
+          {/* <Button
               type="button"
               variant="primary"
               className="w-full"
               onClick={() => signIn()}
             >
               Log In
-            </Button>
-          )}
+            </Button> */}
+          {/* )} */}
         </div>
       </div>
     </div>
