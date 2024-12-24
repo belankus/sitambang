@@ -53,7 +53,7 @@ export default function Apps({ isOpen, setIsOpen }: Proptypes) {
                   alt="image"
                   width={56}
                   height={56}
-                  className="mb-2 h-16 w-16 translate-y-0 rounded-md bg-white p-2 shadow-md transition-transform group-hover:-translate-y-1 group-hover:shadow-lg"
+                  className={`${["information", "activity", "production", "stockpile", "shipment", "procurement", "hse", "hrd", "finance"].some((str) => application.link.includes(str)) ? "grayscale" : ""} mb-2 h-16 w-16 translate-y-0 rounded-md bg-white p-2 shadow-md transition-transform group-hover:-translate-y-1 group-hover:shadow-lg`}
                 />
               </Link>
               <figcaption className="line-clamp-1 text-center text-sm font-semibold">
