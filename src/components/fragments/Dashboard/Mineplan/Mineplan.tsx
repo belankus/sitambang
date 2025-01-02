@@ -5,6 +5,7 @@ import DashboardLayout from "../Main";
 import "@arcgis/map-components/dist/components/arcgis-map";
 import "@arcgis/map-components/dist/components/arcgis-zoom";
 import { setAssetPath as setCalciteComponentsAssetPath } from "@esri/calcite-components/dist/components";
+import "../../../../lib/mockResizeObserver";
 
 import Map from "@arcgis/core/Map";
 import MapView from "@arcgis/core/views/MapView";
