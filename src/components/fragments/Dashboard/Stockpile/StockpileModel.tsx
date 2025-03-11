@@ -28,14 +28,14 @@ const StockpileScene = () => {
   const [info, setInfo] = useState<string | null>(null);
 
   const handleClick = () => {
-    setInfo("Stockpile ID: SP001 | Volume: 50,000 Ton | Kadar Ash: 15%");
+    setInfo("Stockpile ID: SP001 | Volume: 50,000 Ton | Kalori: 5.123 Kcal/kg");
   };
 
   return (
-    <div className="relative h-screen w-screen">
-      <Canvas camera={{ position: [5, 5, 5], fov: 50 }}>
+    <div className="relative h-screen">
+      <Canvas camera={{ position: [0, -20, 3], fov: 10 }}>
         <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 10]} intensity={1} castShadow />
+        <directionalLight position={[5, 5, 10]} intensity={1} castShadow />
         <spotLight position={[0, 5, 10]} angle={0.3} intensity={0.8} />
         <Suspense fallback={null}>
           <mesh onClick={handleClick} receiveShadow castShadow>

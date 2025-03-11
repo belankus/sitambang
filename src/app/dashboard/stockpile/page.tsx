@@ -1,3 +1,4 @@
+import DahsboardLayout from "@/components/fragments/Dashboard/Main";
 import dynamic from "next/dynamic";
 
 const StockpileScene = dynamic(
@@ -9,8 +10,8 @@ const StockpileScene = dynamic(
 
 export default function StockpilePage() {
   return (
-    <div className="h-screen w-screen">
+    <DahsboardLayout>
       <StockpileScene />
-    </div>
+    </DahsboardLayout>
   );
 }
